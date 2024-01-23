@@ -1,0 +1,113 @@
+.producto{
+    padding: 20px;
+    box-shadow: 0px 0px 25px -12px black;
+    max-width: 900px;
+}
+
+.nombreProducto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: justify;
+}
+.precio{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: justify; 
+    font-weight: bold;
+}
+.eliminarProducto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.seccionTabla{
+    display: grid;
+    justify-items: center;
+}
+.tituloCarrito{
+    
+    border-radius: 20px;
+    color: #000000;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 400px;
+}
+.totalCarrito{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: justify; 
+    font-weight: bold;
+}
+
+@media all and (max-width:800px){
+    .producto {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    .producto img{
+        text-align: center;
+        padding: 10px 0px;
+        width: 250px;
+    }
+    .tamañoInput{
+        width: 100px;
+    }
+    .nombreProducto{
+        text-align: center;
+    }
+    .divEliminar{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width:800px){
+    .tituloCarrito{
+        font-size: 1.8rem;
+    }
+    .nombreProducto{
+        font-size: 1.4rem;
+    }
+    .precio{
+        font-size: 1.3rem;
+    }
+    
+}
+@media all and (max-width:500px){
+    .botonesCompra{
+        display: flex;
+        flex-direction: column;
+    }
+    .botonesCompra div{
+        margin: 5px;
+        text-align: center;
+    }
+}
+@media all and (max-width:400px){
+    .totalCarrito{
+        font-size: 1.5rem;
+    }
+    .nombreProducto{
+        font-size: 1.1rem;
+    }
+    .precio{
+        font-size: 1.1rem;
+    }
+    .producto img{
+        text-align: center;
+        padding: 10px 0px;
+        width: 200px;
+    }
+    .producto {
+        max-width: 250px;
+    }
+    .seccionTabla{
+        justify-content: center;
+    }
+}

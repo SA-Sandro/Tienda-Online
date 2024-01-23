@@ -1,0 +1,23 @@
+.sec_titulo{
+    color: #000000;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+td{
+    font-size: 1.3rem;
+}
+.descripcion{
+    min-width: 200px;
+}
+.nombre{
+    min-width: 180px;
+}
+.fecha{
+    min-width: 180px;
+}
+@media all and (max-width:1000px){
+    td{
+        font-size: 0.8rem;
+    }
+}

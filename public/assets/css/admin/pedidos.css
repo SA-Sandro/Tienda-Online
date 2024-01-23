@@ -1,0 +1,9 @@
+.sec_titulo{
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Amatic SC', sans-serif;
+    margin: 20px;
+}
+.cliente,.correo,.telefono,.fecha,.detalles, .nPedido{
+    min-width: 150px;
+}

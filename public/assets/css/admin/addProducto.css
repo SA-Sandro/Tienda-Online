@@ -1,0 +1,28 @@
+.titulo{
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Amatic SC', sans-serif;
+    margin: 20px;
+}
+form div{
+    margin: 10px;
+}
+
+.formulario{
+   display: grid;
+   place-content: center; 
+}
+.formulario label{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+@media all and (min-width: 768px){
+    .formulario input, .formulario select, .formulario textarea{
+        min-width: 600px;
+    }
+}
+@media all and (min-width: 1024px){
+    .formulario input, .formulario select{
+        min-width: 700px;
+    }
+}

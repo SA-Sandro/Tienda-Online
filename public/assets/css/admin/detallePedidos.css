@@ -1,0 +1,20 @@
+legend{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: justify; 
+    font-weight: bold;
+}
+fieldset div{
+    margin: 15px;
+}
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.producto{
+    min-width: 180px;
+}
+.totalProducto{
+    min-width: 150px;
+}
