@@ -2,7 +2,6 @@
 
 class Usuarios
 {
-
     private $config;
     private $cn = null;
 
@@ -20,7 +19,6 @@ class Usuarios
             echo "Error de conexión:" . $e->getMessage();
         }
     }
-
 
     public function registrarUsuario($params)
     {
@@ -44,6 +42,7 @@ class Usuarios
 
         }
     }
+    
     public function iniciarSesion($params){
         try{
             $usuario = $params['nombre_usuario'];

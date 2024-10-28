@@ -3,9 +3,6 @@
 class Carrito
 {
 
-    public function __construct()
-    {
-    }
     public function agregarRopa($id, $ropas, $cantidad = 1)
     {
         session_start();

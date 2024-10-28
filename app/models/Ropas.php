@@ -1,8 +1,6 @@
 <?php
-//aquí añadiremos todas las funcionalidades de acceso a datos
 class Ropas
 {
-
     private $config;
     private $cn = null;
 
@@ -20,6 +18,7 @@ class Ropas
             echo "Error de conexión:" . $e->getMessage();
         }
     }
+
     public function registrar($_params)
     {
         $sql = 'INSERT INTO ropas (nombre_ropa, descripcion, foto, precio, categoria_id, fecha) 
@@ -39,6 +38,7 @@ class Ropas
             return true;
         }
     }
+
     public function actualizar($_params)
     {
         $sql = 'UPDATE ropas SET nombre_ropa=:nombre_ropa ,descripcion=:descripcion, foto=:foto, precio=:precio,categoria_id=:categoria_id WHERE ropas.id = :id;';
@@ -59,6 +59,7 @@ class Ropas
             return false;
         }
     }
+
     public function eliminar($id)
     {
         $sql = 'DELETE FROM ropas WHERE ropas.id= :id ';
@@ -72,6 +73,7 @@ class Ropas
             return false;
         }
     }
+
     public function mostrar()
     {
         $sql = 'SELECT ropas.id,nombre_ropa,categoria_id,descripcion,foto,precio,fecha 
@@ -87,6 +89,7 @@ class Ropas
         }
 
     }
+    
     public function mostrarPorId($id)
     {
         $sql = 'SELECT * FROM `ropas` WHERE ropas.id = :id';

@@ -1,7 +1,6 @@
 <?php
 class Views extends Control
 {
-
     public function inicio()
     {
         $datos = [
@@ -21,6 +20,7 @@ class Views extends Control
         ];
         $this->load_view('tienda', $datos);
     }
+
     public function registrarUsuario()
     {
         $datos = [
@@ -40,6 +40,7 @@ class Views extends Control
         ];
         $this->load_view('iniciarSesion', $datos);
     }
+
     public function productosAdmin()
     {
 
@@ -51,6 +52,7 @@ class Views extends Control
         $this->load_view('admin/productos/tabla', $datos);
 
     }
+
     public function addProducto()
     {
         $datos = [
@@ -61,6 +63,7 @@ class Views extends Control
         $this->load_view('admin/productos/addProducto', $datos);
 
     }
+
     public function actualizarRegistro()
     {
         $id = $_GET['id'];
@@ -73,6 +76,7 @@ class Views extends Control
         $this->load_view('admin/productos/actualizarRegistro', $datos);
 
     }
+
     public function pedidos()
     {
         $datos = [
@@ -83,6 +87,7 @@ class Views extends Control
         $this->load_view('admin/productos/pedidos', $datos);
 
     }
+
     public function verDetallePedidos()
     {
         if (isset($_GET['id'])) {
@@ -96,7 +101,7 @@ class Views extends Control
         $this->load_view('admin/productos/detallePedidos', $datos);
         }
     }
-    //CLIENTE
+
     public function inicioCliente()
     {
         $datos = [
@@ -135,7 +140,6 @@ class Views extends Control
         }
         $this->load_view('cliente/carrito', $datos);
     }
-
 
     public function finalizarCompra(){
         $datos = [

@@ -2,7 +2,6 @@
 
 class Categorias
 {
-
     private $config;
     private $cn = null;
 
@@ -21,7 +20,6 @@ class Categorias
         }
     }
 
-
     public function cargarCategorias(){
 
         $sql = 'SELECT * FROM categoria_ropa';
@@ -33,8 +31,8 @@ class Categorias
         } else {
             return false;
         }
-
     }
+
     public function cargarCategoriasPorId($id){
 
         $sql = 'SELECT * FROM categoria_ropa WHERE categoria_ropa.id = :id';
@@ -49,7 +47,6 @@ class Categorias
         } else {
             return false;
         }
-
     }
 }
 ?>

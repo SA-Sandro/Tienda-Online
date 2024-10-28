@@ -18,6 +18,7 @@ class Clientes
             echo "Error de conexión:" . $e->getMessage();
         }
     }
+    
     public function registrar($_params)
     {
         $sql = 'INSERT INTO clientes (nombre, apellidos, correo, telefono, comentario) 

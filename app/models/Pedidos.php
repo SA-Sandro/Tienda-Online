@@ -6,7 +6,6 @@ class Pedidos
     private $cn = null;
     public function __construct()
     {
-        
         try {
             $this->config = parse_ini_file(__DIR__ . '/../config/config.ini');
             $this->cn = new PDO(
@@ -19,6 +18,7 @@ class Pedidos
             echo "Error de conexión:" . $e->getMessage();
         }
     }
+
     public function registrar($_params)
     {
         $sql = 'INSERT INTO pedidos (id_cliente, total, fecha) 
@@ -35,6 +35,7 @@ class Pedidos
             return $this->cn->lastInsertId();
         }
     }
+
     public function registrarDetallePedidos($_params)
     {
         $sql = 'INSERT INTO detalle_pedidos (pedido_id, producto_id, precio, cantidad) 
@@ -53,7 +54,6 @@ class Pedidos
         }
     }
 
-    //ADMIN
     public function mostrar(){
 
         $sql = 'SELECT p.id,c.nombre,c.apellidos,c.correo,c.telefono, p.total,p.fecha 
@@ -67,6 +67,7 @@ class Pedidos
         }
         
     }
+
     public function mostrarDetallePedidos($id){
         
         $sql = 'SELECT c.nombre, c.apellidos, c.correo, c.telefono, p.total, p.fecha, r.nombre_ropa, r.foto, r.precio, dp.cantidad 
@@ -82,6 +83,5 @@ class Pedidos
         if ($resultado->execute($_array)) {
             return $resultado->fetchAll();
         }
-
     }
 }

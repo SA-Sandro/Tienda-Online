@@ -1,8 +1,6 @@
 <?php
 class Models extends Control
 {
-
-
     public function addProducto()
     {
         $date = date("Y-m-d H:i:s");
@@ -31,13 +29,14 @@ class Models extends Control
             }
         }
     }
+
     public function updateProducto()
     {
         $models = new Models();
         $ropa_model = $models->load_model('Ropas');
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            
+
             if (
                 isset($_POST["nombre_producto"]) && isset($_POST["descripcion"]) && isset($_POST["categoria_id"])
                 && !empty($_FILES['imagensita']['name']) && isset($_POST["precio"])
@@ -74,6 +73,7 @@ class Models extends Control
             }
         }
     }
+
     public function eliminarProducto()
     {
         $id = $_GET['id'];
@@ -89,11 +89,6 @@ class Models extends Control
         }
     }
 
-
-
-
-    //CLIENTE
-
     public function cargarRegistros()
     {
         $models = new Models();
@@ -102,6 +97,7 @@ class Models extends Control
         $listado_ropas = $ropa_model->mostrar();
         return $listado_ropas;
     }
+
     public function cargarRegistrosPorId($id)
     {
         $models = new Models();
@@ -110,6 +106,7 @@ class Models extends Control
         $listado_ropas = $ropa_model->mostrarPorId($id);
         return $listado_ropas;
     }
+
     public function cargarCategoriasPorId($id)
     {
         $models = new Models();
@@ -119,6 +116,7 @@ class Models extends Control
 
         return $categoria;
     }
+
     public function cargarCategorias($models)
     {
 
@@ -127,6 +125,7 @@ class Models extends Control
 
         return $resultado;
     }
+
     public function registrarUsuario()
     {
         $models = new Models();
@@ -146,6 +145,7 @@ class Models extends Control
             }
         }
     }
+
     public function iniciarSesion()
     {
         session_start();
@@ -164,7 +164,6 @@ class Models extends Control
             }
         }
     }
-    //Carrito
 
     public function gestionCarrito()
     {
@@ -191,7 +190,6 @@ class Models extends Control
         }
     }
 
-
     public function disminuirCantidad()
     {
         if (isset($_GET["id"])) {
@@ -199,10 +197,11 @@ class Models extends Control
 
             $models = new Models();
             $carritos_model = $models->load_model('Carrito');
-            $nuevoValor= $carritos_model->disminuirCantidad($id);
+            $nuevoValor = $carritos_model->disminuirCantidad($id);
             echo $nuevoValor;
         }
     }
+
     public function aumentarCantidad()
     {
         if (isset($_GET["id"])) {
@@ -214,6 +213,7 @@ class Models extends Control
             echo $nuevoValor;
         }
     }
+
     public function eliminarProductoCarrito()
     {
         $id = $_GET['id'];
@@ -222,7 +222,7 @@ class Models extends Control
 
         $carritos_model->eliminarDelCarrito($id);
     }
-    //PEDIDOS
+
     public function completarPedido()
     {
         session_start();
@@ -275,6 +275,7 @@ class Models extends Control
             }
         }
     }
+
     public function registrarPedido()
     {
         $models = new Models();
@@ -313,6 +314,7 @@ function manejoSesiones($data)
         header("Location: " . URL . "/Views/inicioCliente");
     }
 }
+
 function validarRol($data)
 {
     switch ($data["rol_id"]) {
