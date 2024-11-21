@@ -1,4 +1,4 @@
-# Green-Clothes: Tienda Online de Ropa ecológica.
+# GreenClothes: Eco-Friendly Clothing Ecommerce
 
 ![Ecommerce](https://github.com/user-attachments/assets/66143744-89aa-45ae-99e9-bb9e3f5b58da)
 
